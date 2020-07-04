@@ -1,0 +1,94 @@
+/* Estrutura */
+.input-container {
+    position        : relative;
+    background-color: #fff;
+    padding-top     : 1rem
+}
+
+.input-container input {
+    border       : 0;
+    border-bottom: 1px solid #7A7A7A;
+    outline      : none;
+    transition   : .2s ease-in-out;
+    box-sizing   : border-box;
+    border-radius: 0 !important;
+    box-shadow   : none !important;
+}
+
+.input-container label {
+    top           : 0;
+    left          : 0;
+    right         : 0;
+    color         : #7A7A7A;
+    font-style    : inherit;
+    font-weight   : inherit;
+    font-size     : 1em;
+    line-height   : 1.5;
+    display       : flex;
+    align-items   : center;
+    position      : absolute;
+    cursor        : text;
+    transition    : .2s ease-in-out;
+    padding-bottom: calc(.375em - 1px);
+    padding-left  : calc(.625em - 1px);
+    padding-right : calc(.625em - 1px);
+    padding-top   : calc(.375em - 1px);
+}
+
+.input-container input,
+.input-container label {
+    height: 3rem;
+}
+
+.input-container input[value=""]:focus,
+.input-container input:not([value=""]):focus {
+    border-bottom: 2px solid hsl(204, 86%, 53%);
+}
+
+.input-container input[value=""]:focus+label,
+.input-container input:not([value=""]):focus+label {
+    color         : hsl(204, 86%, 53%);
+    font-size     : .8rem;
+    top           : -15px;
+    pointer-events: none;
+}
+
+.input-container input:not([value=""])+label {
+    font-size     : .8rem;
+    top           : -15px;
+    pointer-events: none;
+}
+
+.input-container input:not([value=""]):not(:focus):invalid {
+    border-bottom: 2px solid #ff0537;
+}
+
+.input-container input:not([value=""]):not(:focus):invalid+label {
+    color         : #ff0537;
+    font-size     : .8rem;
+    top           : -15px;
+    pointer-events: none;
+}
+
+.input-container.readonly {
+    background-color: #E3E3E3;
+}
+
+.input-container input:read-only {
+    cursor          : not-allowed;
+    background-color: #E3E3E3;
+    border-bottom   : 1px solid #7A7A7A;
+}
+
+.input-container input[value=""]:read-only+label {
+    cursor: not-allowed;
+}
+
+/* textarea:focus,
+input:focus,
+select:focus {
+    border-color      : none !important;
+    outline           : 0;
+    -webkit-box-shadow: none !important;
+    box-shadow        : none !important;
+} */

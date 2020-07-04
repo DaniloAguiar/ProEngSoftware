@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Http\Request;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,4 +16,18 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+})->name('home');
+
+
+Route::get('cadastro/cliente/{id?}', 'ClienteController@index')->name('showCadastroCliente');
+
+
+Route::post('cadastro/cliente', function (Request $request) {
+    dd($request);
+})->name('adicionarCliente');
+
+Route::put('cadastro/cliente', function () {
+});
+
+Route::delete('cadastro/cliente', function () {
 });
