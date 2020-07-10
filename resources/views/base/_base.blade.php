@@ -17,6 +17,7 @@
     <script src="https://kit.fontawesome.com/0773f3feae.js"> </script>
 </head>
 
+
 <body>
     @include('base._header')
     <main class="container">
