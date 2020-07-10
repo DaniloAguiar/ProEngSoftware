@@ -7,8 +7,14 @@ use Illuminate\Http\Request;
 
 class ClienteController extends Controller
 {
-    public function index($id = null)
+
+    public function index()
     {
-        return View('cadastroCliente');
+        return View('cliente.index');
+    }
+
+    public function cadastro($id = null)
+    {
+        return View('cliente.cadastroCliente');
     }
 }

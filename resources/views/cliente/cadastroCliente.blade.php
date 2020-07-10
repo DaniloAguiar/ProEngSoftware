@@ -72,7 +72,6 @@
         </label>
     </div>
 
-
     <div class="columns">
         <div class="column">Rua</div>
         <div class="column">Numero</div>
@@ -83,14 +82,12 @@
         <div class="column">Bairro</div>
     </div>
 
-
     <div class="columns">
         <div class="column">Cidade</div>
         <div class="column">Estado</div>
     </div>
 
-
-
-    <button type="submit"> cadastrar</button>
+    <button class="button is-info" type="submit">Cadastrar</button>
 </form>
+
 @endsection

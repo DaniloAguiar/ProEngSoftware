@@ -15,11 +15,14 @@ use Illuminate\Http\Request;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    // return view('index');
+
+
 })->name('home');
 
+Route::get('cliente', 'ClienteController@index')->name('showIndexCliente');
 
-Route::get('cadastro/cliente/{id?}', 'ClienteController@index')->name('showCadastroCliente');
+Route::get('cadastro/cliente/{id?}', 'ClienteController@cadastro')->name('showCadastroCliente');
 
 
 Route::post('cadastro/cliente', function (Request $request) {
@@ -31,3 +34,7 @@ Route::put('cadastro/cliente', function () {
 
 Route::delete('cadastro/cliente', function () {
 });
+
+
+
+
